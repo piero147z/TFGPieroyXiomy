@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Draft_TFG</string>
+    <string name="tipo_banco_prompt">Seleccionar</string>
+
+    <string-array name="tipo_banco_options">
+        <item>Seleccionar</item>
+        <item>Santander</item>
+        <item>Caixa</item>
+    </string-array>
+</resources>
+

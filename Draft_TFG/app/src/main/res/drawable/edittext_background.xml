@@ -1,0 +1,5 @@
+<!-- edittext_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/white" /> <!-- Color de fondo de la caja de texto -->
+    <corners android:radius="8dp" /> <!-- Radio de los bordes redondeados -->
+</shape>

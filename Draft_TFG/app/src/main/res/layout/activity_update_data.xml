@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_bienvenida"
+    tools:context=".UpdateData">
+
+
+    <ImageView
+        android:id="@+id/signUpImageView"
+        android:layout_width="203dp"
+        android:layout_height="138dp"
+        android:src="@drawable/logo_tfg1"
+        android:transitionName="logoImageTrans" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+
+        <TextView
+            android:id="@+id/textViewQuestion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="¿Cuál es la nueva cantidad que necesitas?"
+            android:textColor="@color/color_launch"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_background"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:hint="Escribe la cantidad" />
+
+        <TextView
+            android:id="@+id/textViewQuestion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:text="¿A cuántos años necesitas?"
+            android:textColor="@color/color_launch"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextYears"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_background"
+            android:inputType="number"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:hint="Escribe los años" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/updateDash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actualizar Dashboard"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:transitionName="buttonSingInTrans"/>
+
+    </LinearLayout>
+</RelativeLayout>

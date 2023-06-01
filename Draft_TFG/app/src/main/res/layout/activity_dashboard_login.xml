@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_bienvenida">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/signUpImageView"
+                android:layout_width="160dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_tfg1"
+                android:transitionName="logoImageTrans"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="80dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/irInicio"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:transitionName="buttonSingInTrans" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tu mejor cuota mensual es con"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/tituloOpcionHipoteca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Título"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/mejorPrecioHipoteca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 1234"
+                android:textSize="40sp"
+                android:textColor="#00FF00" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gráfica de cuotas mensuales"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proporción de pago al capital en hipoteca"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raw Data"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
+
+        <!-- Tabla -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Encabezado -->
+            <TableRow>
+                <TextView
+                    android:text="Banco"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:text="TIN"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:text="TAE"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+            <!-- Fila 1 -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/banco1"
+                    android:text="Banco 1"
+                    android:layout_weight="1"
+                    android:textSize="9sp"
+                    android:padding="8dp"
+                    android:ellipsize="end" />
+                <TextView
+                    android:id="@+id/tin1"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:textSize="9sp"
+                    android:padding="8dp" />
+                <TextView
+                    android:id="@+id/tae1"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:textSize="9sp"
+                    android:padding="8dp" />
+            </TableRow>
+
+            <!-- Fila 2 -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/banco2"
+                    android:text="Banco 2"
+                    android:layout_weight="1"
+                    android:textSize="9sp"
+                    android:padding="8dp"
+                    android:ellipsize="end" />
+                <TextView
+                    android:id="@+id/tin2"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:textSize="9sp"
+                    android:padding="8dp" />
+                <TextView
+                    android:id="@+id/tae2"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:textSize="9sp"
+                    android:padding="8dp" />
+            </TableRow>
+
+            <!-- Fila 3 -->
+            <TableRow>
+                <TextView
+                    android:id="@+id/banco3"
+                    android:text="Banco 3"
+                    android:layout_weight="1"
+                    android:textSize="9sp"
+                    android:padding="8dp"
+                    android:ellipsize="end" />
+                <TextView
+                    android:id="@+id/tin3"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:textSize="9sp"
+                    android:padding="8dp" />
+                <TextView
+                    android:id="@+id/tae3"
+                    android:text=""
+                    android:layout_weight="1"
+                    android:textSize="9sp"
+                    android:padding="8dp" />
+            </TableRow>
+
+        </TableLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/modificarC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modificar Consulta"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:transitionName="buttonSingInTrans"/>
+
+        <LinearLayout
+            android:id="@+id/popupLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/textViewQuestion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="¿Cuál es la nueva cantidad que necesitas?"
+                android:textColor="@color/color_launch"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:hint="Escribe la cantidad" />
+
+            <TextView
+                android:id="@+id/textViewQuestion2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:text="¿A cuántos años necesitas?"
+                android:textColor="@color/color_launch"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextYears"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:hint="Escribe los años" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/updateDash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Actualizar Dashboard"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:transitionName="buttonSingInTrans"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
